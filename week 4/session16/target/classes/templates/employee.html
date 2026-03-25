@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Dashboard</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: #1f4037;
+        }
+
+        .info {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .active {
+            background: green;
+        }
+
+        .salary {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1f4037;
+            margin-top: 15px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #1f4037;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #14532d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+
+    <h2 th:text="${employee.name}">Employee Name</h2>
+    <span class="badge active">Active</span>
+
+    <div class="info">
+        <p><strong>ID:</strong> <span th:text="${employee.id}">101</span></p>
+        <p><strong>Department:</strong> <span th:text="${employee.department}">CSE</span></p>
+        <p><strong>Role:</strong> Senior Developer</p>
+        <p><strong>Email:</strong> shaam@company.com</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Joining Date:</strong> 12-Jan-2023</p>
+    </div>
+
+    <div class="salary">
+        Salary: ₹85,000 / month
+    </div>
+
+    <button class="btn">Edit Profile</button>
+</div>
+
+</body>
+</html>
