@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Person Info</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+.container{
+    margin-top:80px;
+}
+
+form{
+    margin-top:20px;
+}
+
+input{
+    padding:6px;
+    margin:5px;
+}
+
+a{
+    text-decoration:none;
+    padding:8px 15px;
+    background:#ff5722;
+    color:white;
+    border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Person Details</h1>
+
+<p>ID: <span th:text="${person.id}"></span></p>
+<p>Name: <span th:text="${person.nameString}"></span></p>
+
+<form>
+
+<label>ID:</label><br>
+<input type="text" th:value="${person.id}" readonly>
+
+<br><br>
+
+<label>Name:</label><br>
+<input type="text" th:value="${person.nameString}">
+
+</form>
+
+<br>
+
+<a href="/page">Back to Home</a>
+
+</div>
+
+</body>
+</html>
